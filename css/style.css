@@ -33,7 +33,7 @@ html, body {
 
 body {
 	font-family: 'gobold';
-	background-color: maroon;
+	/*background-color: maroon;*/
     /*margin: 0 0 344px 0;  bottom = footer height */
 }
 
@@ -43,7 +43,7 @@ p {
 
 a {
 	text-decoration: none;
-	color: #000;
+	color: aqua;
 	display: block;
 }
 
