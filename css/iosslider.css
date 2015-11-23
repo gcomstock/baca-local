@@ -1,9 +1,16 @@
-.frontPage {
-	margin-left: 17%;
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 
 
+
+.frontPage {
+	margin-left: 17%;
+}
 .frontPage__slider {
 	opacity: 0;
 	transition: opacity 250ms linear;
@@ -58,3 +65,22 @@
 .sliderDots .dot.active {
 	background-color: #05d8f7;
 }
+
+
+
+/* GALLERY DETAIL VIEW */
+
+.galleryDetail {
+	position: fixed;
+	z-index: 9999;
+	left: 17%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.galleryDetail__slider {
+	background-color: #fff;
+}
+

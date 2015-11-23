@@ -1,5 +1,8 @@
 jQuery(document).ready(function($){
 
+    return false;
+    
+
     jQuery.fn.center = function() {
 
         this.css("position","absolute");

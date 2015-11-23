@@ -5,8 +5,6 @@
 
 
 <div class="frontPage">
-
-
 	<div class="frontPage__slider iosSlider">
 		<div class="slider">
 			<?php
@@ -35,7 +33,5 @@
 			?>
 		</div>
 	</div>
-
-
 </div>
 <?php get_footer(); ?>
