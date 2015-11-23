@@ -2,6 +2,8 @@ var $ = jQuery;
 jQuery(function($){
 
 
-	//debugger;
+	$('.frontPage__slider').iosSlider();
+
+	console.log('init slider...')
 
 });

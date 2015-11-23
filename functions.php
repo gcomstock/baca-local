@@ -5,6 +5,7 @@
 function get_files() {
 	
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css' );
+    wp_enqueue_style( 'iosslider', get_template_directory_uri() . '/css/iosslider.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	    
     wp_register_script( 'isotope.pkgd.min', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array( 'jquery' ) );
