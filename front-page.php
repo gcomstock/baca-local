@@ -5,12 +5,13 @@
 	<div class="frontPage__slider iosslider">
 		<div class="slider">
 			<?php
-				query_posts('home'); //you can dynamically define this string based off of the url slug if you want to revise your contnt.php loop to be cleaner like this one
+				//you can dynamically define the category_name string based off of the url slug if you want to revise your contnt.php loop
+				$the_query = new WP_Query( array( 'category_name' => 'nature' ) );
 
-				if ( have_posts() ) {
-					while ( have_posts() ) {
-						the_post();
-						$img   = get_the_post_thumbnail($post->ID, 'full');
+				if ( $the_query->have_posts() ) {
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+						$img = get_the_post_thumbnail($post->ID, 'thumbnail');
 						$title = get_the_title();
 
 						echo '
@@ -20,7 +21,7 @@
 						';
 					}
 				}
-				wp_reset_query();
+				wp_reset_postdata();
 			?>
 		</div>
 	</div>
