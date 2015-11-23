@@ -1,6 +1,5 @@
 <div class="grid clearfix">
 	<div class="grid-sizer clearfix"></div><!-- /grid-sizer -->
-
 	<?php
 	if (have_posts()):
 		while (have_posts()): the_post(); ?>
