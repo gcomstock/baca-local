@@ -41,7 +41,6 @@ function constructHomeSlider ($slider) {
 
 
 function constructGallerySlider ($slider) {
-
 	sizeLightbox();
 
 	$slider.iosSlider({
@@ -51,6 +50,8 @@ function constructGallerySlider ($slider) {
 		infiniteSlider: true,
 		snapSlideCenter: true,
 		autoSlideHoverPause: false,
+		navPrevSelector: $('.nav--prev'),
+		navNextSelector: $('.nav--next'),
 		onSliderLoaded: loaded,
 		onSliderUpdate: update,
 		onSliderResize: resize,
@@ -76,11 +77,6 @@ function constructGallerySlider ($slider) {
 
 		//args.sliderContainerObject.css('opacity','1');
 	}
-
-
-
-
-
 
 	function resize(args) {
 		sizeLightbox();

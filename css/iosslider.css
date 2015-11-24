@@ -82,4 +82,41 @@ html {
 .galleryDetail__lightbox {
 	background-color: #fff;
 	padding: 10px;
+	position: relative;
 }
+
+.galleryDetail__lightbox .nav {
+	position: absolute;
+	cursor: pointer;
+	left: -60px;
+	width: 70px;
+	height: 60px;
+	background-image: url(../images/icons-lightbox.png);
+	background-size: 210px 120px;
+	background-color: #fff;
+}
+
+.galleryDetail__lightbox .nav--close {
+	top: 0;
+	background-position: 0 0;
+}
+.galleryDetail__lightbox .nav--close:hover {
+	background-position: 0 60px;
+}
+
+.galleryDetail__lightbox .nav--next {
+	top: 140px;
+	background-position: 70px 0;
+}
+.galleryDetail__lightbox .nav--next:hover {
+	background-position: 70px 60px;
+}
+
+.galleryDetail__lightbox .nav--prev {
+	top: 210px;
+	background-position: 140px 0;
+}
+.galleryDetail__lightbox .nav--prev:hover {
+	background-position: 140px 60px;
+}
+
