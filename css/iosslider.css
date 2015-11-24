@@ -71,7 +71,6 @@ html {
 /* GALLERY DETAIL VIEW */
 
 .galleryDetail {
-	display: none;
 	position: fixed;
 	z-index: 9999;
 	left: 17%;
@@ -80,8 +79,7 @@ html {
 	bottom: 0;
 	background-color: rgba(0,0,0,0.5);
 }
-
-.galleryDetail__slider {
+.galleryDetail__lightbox {
 	background-color: #fff;
+	padding: 10px;
 }
-
