@@ -31,6 +31,18 @@ html, body {
 		url('../fonts/gobold/Gobold Regular.svg#webfont') format('svg');
 }
 
+@font-face {
+	font-family:'gobold';
+	font-weight: lighter;
+	font-style: normal;
+	src:url('../fonts/gobold/Gobold Thin.eot');
+	src:url('../fonts/gobold/Gobold Thin.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/gobold/Gobold Thin.woff2') format('woff2'),
+		url('../fonts/gobold/Gobold Thin.woff') format('woff'),
+		url('../fonts/gobold/Gobold Thin.ttf') format('truetype'),
+		url('../fonts/gobold/Gobold Thin.svg#webfont') format('svg');
+}
+
 body {
 	font-family: 'gobold';
 	background-color: #fff;

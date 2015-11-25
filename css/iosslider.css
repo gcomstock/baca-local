@@ -71,6 +71,7 @@ html {
 /* GALLERY DETAIL VIEW */
 
 .galleryDetail {
+	display: none;
 	position: fixed;
 	z-index: 9999;
 	left: 17%;
@@ -81,6 +82,11 @@ html {
 	background-size: 7px;
 	background-position: top left;
 }
+
+.galleryDetail.active {
+	display: block;
+}
+
 .galleryDetail__lightbox {
 	background-color: #fff;
 	padding: 10px;
@@ -136,3 +142,99 @@ html {
 	background-position: 140px 60px;
 }
 
+
+
+
+
+
+
+
+.photoGrid {
+  margin-left: 17%;
+  position: relative;
+  line-height: 0; /* Prevent vertical gaps */
+   
+  -webkit-column-count: 4;
+  -webkit-column-gap:   1px;
+  -moz-column-count:    4;
+  -moz-column-gap:      1px;
+  column-count:         4;
+  column-gap:           1px;  
+}
+
+.photoGrid__photo {
+  position: relative;
+  cursor: pointer;
+}
+.photoGrid__photo:after { /* grid line */
+	position: absolute;
+	content: '';
+	bottom: 0;
+	height: 1px;
+	background-color: #fff;
+	width: 100%;
+}
+.photoGrid__photo img {
+	display: block;
+}
+.photoGrid__overlay {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/bg-dot.png);
+	background-size: 7px;
+	background-position: top left;
+	/*box-shadow: inset 0 0 1px 1px #fff;*/
+	transition: all 100ms linear;
+}
+.photoGrid__photo:hover .photoGrid__overlay {
+	opacity: 1;
+}
+.photoGrid__overlay__title {
+	text-transform: uppercase;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	color: #000;
+	background-color: rgba(255,255,255,0.85);
+	line-height: 1rem;
+	padding: 0.5rem;
+
+	font-size: 1rem;
+	font-weight: 100;
+	/*transition: all 100ms linear;*/
+	/*transform: translateY(100%);*/
+}
+.photoGrid__photo:hover .photoGrid__overlay__title {
+	/*transform: translateY(0);*/
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+  .photoGrid {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  .photoGrid {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  .photoGrid {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
