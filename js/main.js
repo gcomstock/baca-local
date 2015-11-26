@@ -63,9 +63,8 @@ function constructGallerySlider ($slider) {
 
 	function slideChange(args) {
 		console.log(args);
+		console.log('pull new slide info and add to slideshow');
 		//var slideNumber = args.currentSlideNumber%slideLength;
-		// $('.dot').removeClass('active');
-		// $('.dot').eq(slideNumber-1).addClass('active');
 	}
 
 	function update(args) {
@@ -74,7 +73,7 @@ function constructGallerySlider ($slider) {
 
 	function loaded(args) {
 		console.log('loaded');
-
+		sizeLightbox();
 		//args.sliderContainerObject.css('opacity','1');
 	}
 
@@ -84,17 +83,12 @@ function constructGallerySlider ($slider) {
 
 		//args.sliderObject.iosSlider('update');
 
-		//debugger;
-
-
-
 		// args.sliderContainerObject.css({
-		// 	 'height': winHeight*0.8,z
+		// 	 'height': winHeight*0.8,
 		// 	 'width' : galleryDetailWidth*0.8
 		// 	'height': $galleryDetail.height,
 		// 	'width' : $galleryDetail.width
 		// });
-
 
 		// args.sliderContainerObject.find('.slider').css({
 		// 	'height': galleryDetailHeight,
@@ -122,10 +116,8 @@ function constructGallerySlider ($slider) {
 var $ = jQuery;
 jQuery(function($){
 
-	// $('.tabImage').on('click', function(){
-	// 	console.log('clciked');
-	// });
 
+	//make appropriate img gallery for current page
 	var frontpageSlider = document.querySelector('.frontPage__slider');
 	var galleryLightboxSlider = document.querySelector('.galleryDetail__lightbox__slider');
 
@@ -135,6 +127,43 @@ jQuery(function($){
 	if (galleryLightboxSlider) {
 		constructGallerySlider($(galleryLightboxSlider));
 	}
+
+
+	//thumbnail click handler
+	$('.photoGrid__photo').on('click', function(){
+		var $el    = $('.photoGrid__photo');
+		var length = $el.length;
+		var index  = $el.index(this);
+
+		var arr = [];
+		arr.push((index-1+length)%length); //previous thumbnail
+		arr.push(index);
+		arr.push((index+1+length)%length); //next thumbnail
+
+		$.each(arr, function(index, value) {
+			var imgUrl = $el.eq(value).data('imgurl');
+			var imgTitle = $el.eq(value).find('.photoGrid__overlay__title').text();
+
+			var t = ''+
+			'<div class="slide" data-title="'+imgTitle+'">'+
+				'<div class="slideImg" style="background-image: url('+imgUrl+')">'+
+				'</div>'+
+			'</div>';
+
+			$('.galleryDetail__lightbox__slider').iosSlider('addSlide', t, index); //add slide, slide template, slide index
+		});
+
+		$('.galleryDetail__lightbox__slider').iosSlider('update');
+		$('.galleryDetail').show();
+	});
+
+
+	//galleryDetail close button click handler
+	$('.nav--close').on('click', function(){
+		//$('.galleryDetail').hide();
+		$('.galleryDetail').removeClass('active');
+	});
+
 	
 });
 
