@@ -64,7 +64,9 @@ function constructGallerySlider ($slider) {
 	function slideChange(args) {
 		console.log(args);
 		console.log('pull new slide info and add to slideshow');
-		//var slideNumber = args.currentSlideNumber%slideLength;
+
+
+		var slideNumber = args.currentSlideNumber%slideLength;
 	}
 
 	function update(args) {
@@ -112,6 +114,7 @@ function constructGallerySlider ($slider) {
 
 
 
+var $slider = {};
 
 var $ = jQuery;
 jQuery(function($){
@@ -122,25 +125,27 @@ jQuery(function($){
 	var galleryLightboxSlider = document.querySelector('.galleryDetail__lightbox__slider');
 
 	if (frontpageSlider) {
-		constructHomeSlider($(frontpageSlider));
+		$slider = $(frontpageSlider);
+		constructHomeSlider($slider);
 	}
 	if (galleryLightboxSlider) {
-		constructGallerySlider($(galleryLightboxSlider));
+		$slider = $(galleryLightboxSlider);
+		constructGallerySlider($slider);
 	}
 
 
 	//thumbnail click handler
 	$('.photoGrid__photo').on('click', function(){
-		var $el    = $('.photoGrid__photo');
-		var length = $el.length;
-		var index  = $el.index(this);
+		var $el     = $('.photoGrid__photo');
+		var length  = $el.length;
+		var index   = $el.index(this);
 
 		var arr = [];
-		arr.push((index-1+length)%length); //previous thumbnail
-		arr.push(index);
-		arr.push((index+1+length)%length); //next thumbnail
+			arr.push(index);
+			arr.push((index+1+length)%length); //next thumbnail
+			arr.push((index-1+length)%length); //previous thumbnail
 
-		$.each(arr, function(index, value) {
+		$.each(arr, function(i, value) {
 			var imgUrl = $el.eq(value).data('imgurl');
 			var imgTitle = $el.eq(value).find('.photoGrid__overlay__title').text();
 
@@ -150,20 +155,21 @@ jQuery(function($){
 				'</div>'+
 			'</div>';
 
-			$('.galleryDetail__lightbox__slider').iosSlider('addSlide', t, index); //add slide, slide template, slide index
+			$slider.iosSlider('addSlide', t, i); //addSlide, slide template, slide index
 		});
 
-		$('.galleryDetail__lightbox__slider').iosSlider('update');
-		$('.galleryDetail').show();
+		$slider.iosSlider('update');
+		//$slider.iosSlider('goToSlide', 1);
+		$('.galleryDetail').addClass('active');
 	});
 
 
 	//galleryDetail close button click handler
 	$('.nav--close').on('click', function(){
-		//$('.galleryDetail').hide();
 		$('.galleryDetail').removeClass('active');
-	});
 
-	
+		//remove all slides
+		$slider.find('.slide').remove();
+	});
 });
 

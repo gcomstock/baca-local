@@ -72,6 +72,7 @@ html {
 
 .galleryDetail {
 	pointer-events: none;
+	opacity: 0;
 	position: fixed;
 	z-index: 9999;
 	left: 17%;
@@ -84,7 +85,7 @@ html {
 }
 
 .galleryDetail.active {
-	display: block;
+	opacity: 1;
 	pointer-events: all;
 }
 
