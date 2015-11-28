@@ -1,4 +1,3 @@
-
 <div class="photoGrid">
 	<?php
 
@@ -33,3 +32,5 @@
 
 	?>
 </div>
+
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/content.js"></script>

@@ -1,9 +1,5 @@
 <?php get_header(); ?>
-
-
 <div class="sliderDots"></div>
-
-
 <div class="frontPage">
 	<div class="frontPage__slider iosSlider">
 		<div class="slider">
@@ -34,4 +30,7 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/front-page.js"></script>
+
 <?php get_footer(); ?>
