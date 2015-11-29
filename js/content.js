@@ -43,15 +43,11 @@ function addSlides(thumbIndex) {
 
 		var t = ''+
 		'<div class="slide" data-title="'+imgTitle+'" data-thumbindex='+thumbIndex+'>'+
-			'<div class="slideImg" style="background-image: url('+imgUrl+')">'+
-			'</div>'+
+			'<img src="'+imgUrl+'">'+
 		'</div>';
 
 		$slider.iosSlider('addSlide', t, 1); //addSlide, slide template, slide index
 	});
-
-	// var activeTitle = $('.photoGrid__photo').eq(thumbIndex).find('.photoGrid__overlay__title').text();
-	// $('.galleryDetail__lightbox__title').text(activeTitle);
 
 	$slider.iosSlider('update');
 }
@@ -104,7 +100,7 @@ function constructGallerySlider ($slider) {
 		var galleryDetailWidth = $('.galleryDetail').outerWidth(true);
 		var galleryDetailHeight = $('.galleryDetail').outerHeight(true);
 		
-		if (window.outerWidth >= 800) {
+		if (window.innerWidth >= 800) {
 			$('.galleryDetail__lightbox').css({
 				'margin-top': galleryDetailHeight*0.06,
 				'margin-left': galleryDetailWidth*0.08,
