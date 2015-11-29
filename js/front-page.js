@@ -12,7 +12,7 @@ function constructHomeSlider ($slider) {
 		startAtSlide: 1,
 		infiniteSlider: true,
 		autoSlideTransTimer: 800,
-		autoSlide: true,
+		autoSlide: false,
 		autoSlideTimer: 2500,
 		snapSlideCenter: true,
 		autoSlideHoverPause: false,
