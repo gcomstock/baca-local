@@ -12,7 +12,8 @@ function get_files() {
     wp_register_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.js', array( 'jquery' ) );
     wp_register_script( 'scrollTop', get_template_directory_uri() . '/js/scrollTop.js', array( 'jquery'  ) );
     wp_register_script( 'menu-bar', get_template_directory_uri() . '/js/menu-bar.js', array( 'jquery' ) );
-    wp_register_script( 'addClasstoSecond', get_template_directory_uri() . '/js/addClasstoSecond.js', array( 'jquery' ) );
+    wp_register_script( 'wrapMenus', get_template_directory_uri() . '/js/wrapMenus.js', array( 'jquery' ) );
+    wp_register_script( 'getPermalink', get_template_directory_uri() . '/js/getPermalink.js', array( 'jquery' ) );
     wp_register_script( 'showMore', get_template_directory_uri() . '/js/showMore.js', array( 'jquery' ) );
    
     wp_enqueue_script( 'isotope.pkgd.min' );
@@ -20,7 +21,8 @@ function get_files() {
     wp_enqueue_script( 'lightbox' );
     wp_enqueue_script( 'scrollTop' );
     wp_enqueue_script( 'menu-bar' );
-    wp_enqueue_script( 'addClasstoSecond' );
+    wp_enqueue_script( 'wrapMenus' );
+    wp_enqueue_script( 'getPermalink' );
     wp_enqueue_script( 'showMore' );
 
 }
