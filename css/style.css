@@ -20,33 +20,22 @@ html, body {
 }
 
 @font-face {
-	font-family:'gobold';
-	font-weight: normal;
-	font-style: normal;
-	src:url('../fonts/gobold/Gobold Regular.eot');
-	src:url('../fonts/gobold/Gobold Regular.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/gobold/Gobold Regular.woff2') format('woff2'),
-		url('../fonts/gobold/Gobold Regular.woff') format('woff'),
-		url('../fonts/gobold/Gobold Regular.ttf') format('truetype'),
-		url('../fonts/gobold/Gobold Regular.svg#webfont') format('svg');
-}
-
-@font-face {
-	font-family:'gobold';
-	font-weight: lighter;
-	font-style: normal;
-	src:url('../fonts/gobold/Gobold Thin.eot');
-	src:url('../fonts/gobold/Gobold Thin.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/gobold/Gobold Thin.woff2') format('woff2'),
-		url('../fonts/gobold/Gobold Thin.woff') format('woff'),
-		url('../fonts/gobold/Gobold Thin.ttf') format('truetype'),
-		url('../fonts/gobold/Gobold Thin.svg#webfont') format('svg');
+    font-family: 'gobold';
+    src: url('../fonts/gobold_light-webfont.eot');
+    src: url('../fonts/gobold_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gobold_light-webfont.woff2') format('woff2'),
+         url('../fonts/gobold_light-webfont.woff') format('woff'),
+         url('../fonts/gobold_light-webfont.ttf') format('truetype'),
+         url('../fonts/gobold_light-webfont.svg#gobold_thin_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
 	font-family: 'gobold';
+	text-transform: uppercase;
 	background-color: #fff;
-    /*margin: 0 0 344px 0;  bottom = footer height */
+	letter-spacing: 2px;
 }
 
 p {
