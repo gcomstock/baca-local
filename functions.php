@@ -6,6 +6,7 @@ function get_files() {
 	
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css' );
     wp_enqueue_style( 'iosslider', get_template_directory_uri() . '/css/iosslider.css' );
+    wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	    
     //wp_register_script( 'isotope.pkgd.min', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array( 'jquery' ) );
@@ -16,7 +17,6 @@ function get_files() {
     wp_register_script( 'addArrow', get_template_directory_uri() . '/js/addArrow.js', array( 'jquery' ) );
     wp_register_script( 'showMore', get_template_directory_uri() . '/js/showMore.js', array( 'jquery' ) );
     wp_register_script( 'iosslider', get_template_directory_uri() . '/js/jquery.iosslider.min.js', array( 'jquery' ) );
-    //wp_register_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ) );
    
     //wp_enqueue_script( 'isotope.pkgd.min' );
     //wp_enqueue_script( 'masonry-layout' );
@@ -38,13 +38,10 @@ function theme_setup() {
 	add_theme_support('post-thumbnails');
 
     register_nav_menus(array(
-
         'primary' => __('Primary Navigation')
-
     ));
 
 }
 add_action('after_setup_theme','theme_setup');
-
 add_filter( 'show_admin_bar' , '__return_false' );
 ?>

@@ -152,6 +152,21 @@ html {
 .galleryDetail__lightbox .nav--close:hover {
 	background-position: 0 60px;
 }
+@media screen and (max-width: 800px) {
+	.galleryDetail__lightbox .nav--close {
+		left: 0;
+		bottom: 0;
+		top: inherit;
+		border: none;
+		z-index: 100;
+		height: 44px;
+		width: 50px;
+		background-size: 154px 88px;
+	}
+	.galleryDetail__lightbox .nav--close:hover {
+		background-position: 0 0;
+	}
+}
 
 
 .galleryDetail__lightbox .nav--next {
@@ -217,8 +232,11 @@ html {
 	.galleryDetail__lightbox__title {
 		left: 0;
 		right: 0;
+		padding-left: 50px;
 		line-height: 44px;
-		font-size: 1rem;
+		font-size: 0.9rem;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 }
 
@@ -296,4 +314,10 @@ html {
 	line-height: 1.4rem;
 	padding: 0.5rem;
 	font-size: 0.9rem;
+}
+
+@media screen and (max-width: 800px) {
+	.photoGrid__photo .photoGrid__overlay {
+		display: none;
+	}
 }
