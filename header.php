@@ -8,25 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-<div class="mock"></div><!-- /mock -->
-
-<div class="centered">
-	<img class="xbutton" src="<?php echo bloginfo('template_directory'); ?>/images/xbutton.png" alt="xbutton">
-	<div class="mainImage"></div><!-- /mainImage -->
-	<div class="navLeft">
-		<img src="<?php echo bloginfo('template_directory'); ?>/images/navLeft.png" alt="left">
-	</div><!-- /navLeft -->
-	<div class="navRight">
-		<img src="<?php echo bloginfo('template_directory'); ?>/images/navRight.png" alt="right">
-	</div><!-- /navRight -->  
-</div><!-- /centered -->
-
-<div class="goback">
-	<img src="<?php bloginfo('template_directory'); ?>/images/goback.png" alt="back">
-</div><!-- /goback -->
-
 <div class="wrapper">
-
 	<div id="menu-bar">
 		<span class='icon'>i</span>
 		<span class='icon'>i</span>
