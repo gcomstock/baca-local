@@ -8,6 +8,8 @@
 </head>
 <body <?php body_class(); ?>>
 
+<div class="mock"></div><!-- /mock -->
+
 <div class="centered">
 	<img class="xbutton" src="<?php echo bloginfo('template_directory'); ?>/images/xbutton.png" alt="xbutton">
 	<div class="mainImage"></div><!-- /mainImage -->
@@ -26,8 +28,12 @@
 <div class="wrapper">
 
 	<div id="menu-bar">
-		<img src="<?php echo bloginfo('template_directory'); ?>/images/menu-bar.png" alt="menu">	
+		<span class='icon'>i</span>
+		<span class='icon'>i</span>
+		<span class='icon'>i</span>
 	</div><!-- /menu-bar -->
+	
+	<div class="page-name"></div><!-- /page-name -->
 
 	<div class="navbar-container clearfix">
 
@@ -43,7 +49,11 @@
 		?>
 		<?php wp_nav_menu($args); ?>
 
-		<div class="scrollTop">
-			<img src="<?php echo bloginfo('template_directory'); ?>/images/scrollTop.png" alt="X">	
-		</div><!-- /scrollTop -->
+		<?php if (!is_front_page()&&!is_page('about')) {?> 
+
+			<div class="scrollTop">
+				<li>BACK TO TOP</li>
+			</div><!-- /scrollTop -->
+
+		<?php } ?>
 	</div><!-- /navbar-container -->
