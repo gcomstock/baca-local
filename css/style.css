@@ -231,7 +231,7 @@ ul li a:hover {
     letter-spacing: 0.2px;
 }
 
-.scrollTop h5 {
+.scrollTop li {
 	display: inline;
 }
 
@@ -311,7 +311,7 @@ ul li.current-nav {
 	}
 
 	#logo-mobile {
-		display: block;
+		display: inline-block;
 		margin: 0 auto;
 		width: 6.8rem;
 	}
@@ -320,7 +320,8 @@ ul li.current-nav {
 		display: none;
 		text-align: center;
 		border-top: 1px solid #000;
-		padding: 2rem 0 0 0;
+		padding: 2rem .7rem 0 .7rem;
+		/*padding: 2rem 0 0 0;*/
 		/*padding-left: 1.4rem;*/
 	}
 
@@ -499,6 +500,7 @@ ul li.current-nav {
 		position: relative;
 		width: 100%;
 		float: none;
+		text-align: center;
 	}
 
 	.navbar-container ul li {
@@ -508,7 +510,7 @@ ul li.current-nav {
 	}
 
 	.top-menu, .bottom-menu {
-		padding-left: 1.5rem;
+		padding-left: 0.5rem;
 	}
 
 	.top-menu {
@@ -915,19 +917,29 @@ iframe {
 	width: 100%;
 }
 
+.video-wrapper {
+	padding: 2rem 2rem 0 2rem;
+}
+
 .vimeoVid {
-	background-color: #f0f5ff;
+	/*background-color: #f0f5ff;*/
 	padding: 20px 20px 0 20px;
 	margin: 0 0 3rem 0; 
+	border: 1px solid #000;
 }
 
 .vimeoVid h1 {
-	text-transform: lowercase;
+	/*text-transform: lowercase;*/
 	margin-bottom: 1rem;
+	font-size: 1.5rem;
 }
 
 .vimeoVid p {
 	line-height: 1.8rem;
+}
+
+.vimeoVid .vimeoDescription {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .showMore {
@@ -942,7 +954,7 @@ iframe {
 }
 
 .hideContent {
-	height: 3.9em;
+	height: 0px;
 	overflow: hidden;
 }
 
@@ -971,17 +983,26 @@ iframe {
 }
 
 @media screen and (max-width: 650px) {
-	.vimeoVid h1 {
-		font-size: 1.5rem; }
-
 	iframe {
 		height: 290px;
 	}
 }
 
 @media screen and (max-width: 415px) {
+	.video-wrapper {
+		padding: 0;
+	}
+
+	.vimeoVid {
+		padding: 10px 10px 0 10px;
+	}
+
 	.vimeoVid h1 {
-		font-size: 1.3rem;
+		font-size: 1rem;
+	}
+
+	.vimeoVid p {
+		font-size: 0.8rem;
 	}
 
 	iframe {
