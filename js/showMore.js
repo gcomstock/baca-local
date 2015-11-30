@@ -6,10 +6,10 @@ jQuery(document).ready(function($){
 		var linkText = $this.text().toUpperCase();    
 		    
 	    if(linkText === "SHOW MORE"){
-	        linkText = "Show Less";
+	        linkText = "SHOW LESS";
 	        $content.removeClass('hideContent').addClass('showContent');
 	    } else {
-	        linkText = "Show More";
+	        linkText = "SHOW MORE";
 	        $content.removeClass('showContent').addClass('hideContent');
 	    };
 	    $this.text(linkText);
