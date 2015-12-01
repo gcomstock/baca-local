@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
 	}
 	last = arr.pop();
 	secondLast = last - 2; 
-	navlist.slice(0, secondLast).wrapAll("<div class='top-menu clearfix'></div>");
-	navlist.slice(secondLast, last).wrapAll("<div class='bottom-menu clearfix'></div>");
+	navlist.slice(0, secondLast).wrapAll("<div class='top-menu'></div>");
+	navlist.slice(secondLast, last).wrapAll("<div class='bottom-menu'></div>");
 
 });

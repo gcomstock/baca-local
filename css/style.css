@@ -33,6 +33,7 @@ html, body {
 
 body {
 	font-family: 'gobold';
+	font-size: 0.9rem;
 	text-transform: uppercase;
 	background-color: #fff;
 	letter-spacing: 2px;
@@ -42,6 +43,9 @@ a {
 	color: #000;
 	text-decoration: none;
 }
+a:hover {
+	color: #05d8f7;
+}
 
 ul li, li {
 	list-style: none;
@@ -50,7 +54,6 @@ ul li, li {
 
 
 /* Grid System */
-
 .row {
 	margin-right: -2px;
 }
@@ -65,7 +68,6 @@ ul li, li {
 	.row {
 		margin-right: 0;
 	}
-
 	.col {
 		padding-right: 0;
 	}
@@ -74,16 +76,11 @@ ul li, li {
 
 
 
-ul li a:hover {
-	color: #00fcff;
-}
-
 #logo {
-	margin-top: 30px;
-	margin-bottom: 90px;
-	width: 10vw;
-	max-width: 205px;
-	margin-left: 30px;
+	margin: 25px 25px 75px 25px;
+	width: 70%;
+	width: calc(100% - 50px);
+	max-width: 160px;
 }
 
 #logo-mobile {
@@ -97,24 +94,11 @@ ul li a:hover {
 
 
 .scrollTop {
-	text-align: left;
-    margin-top: 16.4rem;
-    margin-left: 1.2rem;
-    font-size: 0.8rem;
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
 }
 
-.scrollTop li {
-	display: inline;
-}
-
-.scrollTop li:hover {
-	cursor: pointer;
-}
-
-.menu-primary-container {
-	/*padding-top: 1.5rem;*/
-	/*padding-right: 1.1rem;*/
-}
 
 .menu-primary-container .menu li.current-menu-item {
 	border-bottom: 1px solid #000;
@@ -140,8 +124,9 @@ ul li a:hover {
 
 	#logo-mobile {
 		display: inline-block;
-		margin: 0 auto;
-		width: 6.8rem;
+		/*width: 6.8rem;*/
+		width: 135px;
+		height: 44px;
 	}
 
 	.menu-primary-container {
@@ -193,41 +178,34 @@ ul li a:hover {
 .navbar-container {
 	overflow: hidden;
 	position: fixed;
+	top: 0;
+	left: 0;
 	width: 17%;
+	height: 100%;
+	background-color: #fff;
 }
 
 .navbar-container ul li {
-	text-align: left;
     letter-spacing: 1px;
-    font-size: 0.9rem;
-    /*margin: 1rem 1.2rem 0 1.2rem;*/
-	margin: 30px 30px 0 30px;
+	margin: 25px 25px 0 25px;
+}
+
+.navbar-container a {
+	display: block;
 }
 
 
 
 @media screen and (max-width: 800px) {
-	.grid-sizer,
-	.grid-item {
-		width: 50%;
-	}
-
-	.grid {
-		width: 100%;
-		float: none;
-		left: 0;
-	}
-
 	.navbar-container {
-		position: relative;
 		width: 100%;
-		float: none;
+		height: 44px;
+		border-bottom: 1px solid #000;
 		text-align: center;
+		z-index: 1000;
 	}
-
 	.navbar-container ul li {
 	    font-size: 1.2rem;
-	    /*margin:0 0 1.5rem 0;*/
 	    margin: 0;
 	}
 
@@ -260,131 +238,14 @@ ul li a:hover {
 	.menu-primary-container .menu li.current-menu-item a {
 		color: #00fcff;
 	}
-}
 
-@media screen and (max-width: 415px) {
-	.grid-sizer,
-	.grid-item {
-		width: 33.333%;
+
+	.photoGrid {
+		margin-top: 44px;
 	}
+
 }
 
-.excerpt {
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);  /* Safari */
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);  /* Opera 11.6 to 12.0 */
-	-moz-transform: translateY(-50%);  /* Firefox 3.6 to 15 */
-	transform: translateY(-50%); /* Standard syntax */
-	background-color: #000;
-	display: block;
-	color: #fff;
-	font-size: 10px;
-	text-transform: lowercase;
-	padding: 5px 20px;
-	text-align: center;
-	width: 100%;
-	display: none;
-}
-
-.grid-item:hover {
-	border: 1px solid #000;
-	cursor: pointer;
-}
-
-.grid-item:hover .excerpt {
-	display: block;
-	pointer-events: none;
-}
-
-/* LightBox */
-
-.goback {
-	display: none;
-}
-
-.overlay {
-	background-color: rgba(0,0,0,0.7);
-	width: 100%;
-	height: 450%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: .7;
-	display: none;
-	z-index: 6000;
-	background-position: bottom center;
-	background-attachment: scroll;
-	background-image: url(../images/overlayPattern.png);
-	background-repeat: repeat;
-}
-
-.overlayMobile {
-	background-color: #f0f5ff;
-	width: 100%;
-	height: 450%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
-	z-index: 6000;
-}
-
-.overlayMobileNav {
-	font-size: 2rem;
-	text-align: left;
-	padding-left: .3rem;
-	background-color: #00fcff;
-	color: #000;
-	width: 100%;
-	height: 50px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
-	z-index: 6000;
-	cursor: pointer;
-}
-
-.overlayMobileNav p {
-	display: inline;
-	font-weight: bold;
-	position: relative;
-	top: -0.4rem;
-	left: .2rem;
-}
-
-.overlayMobileNav img {
-	display: inline;
-    position: relative;
-    top: .2rem;
-    width: 40px;
-    height: 38px;
-    margin-top: .2rem;
-}
-
-.overlayMobileNav span {
-	font-size: 2rem;
-	letter-spacing: 0.2px;
-	position: relative;
-	top: -.1rem;
-	left: .3rem;
-}
-
-.xbutton, .navRight, .navLeft {
-	display: none;
-}
-
-@media screen and (max-width: 415px) {
-	.excerpt {
-		opacity: 0;
-	}
-	
-	.grid-item:hover {
-		opacity: .8;
-	}
-}
 
 /* about.php */
 
@@ -513,17 +374,6 @@ textarea:focus, input:focus{
     outline: 0;
 }
 */
-@media screen and (max-width: 1020px) {
-	
-}
-
-@media screen and (max-width: 830px) {
-	
-}
-
-@media screen and (max-width: 768px) {
-	
-}
 
 /*@media screen and (max-width: 650px) {
 	.bioName h1 {

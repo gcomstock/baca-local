@@ -13,11 +13,6 @@
 						$imgUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 						$title = get_the_title();
 
-						//$img = get_the_post_thumbnail($post->ID, 'thumbnail'); //returns <img> tag, not desired here
-
-						//thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
-						//$url = $thumb['0'];
-
 						echo '
 						<div class="slide" data-title="'.$title.'">
 							<div class="slideImg" style="background-image: url('.$imgUrl.')"></div>

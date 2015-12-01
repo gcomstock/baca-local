@@ -62,7 +62,7 @@ function constructGallerySlider ($slider) {
 		startAtSlide: 2,
 		infiniteSlider: true,
 		snapSlideCenter: true,
-		autoSlideHoverPause: false,
+		snapFrictionCoefficient: 0.7,
 		navPrevSelector: $('.nav--prev'),
 		navNextSelector: $('.nav--next'),
 		onSlideChange: slideChange,

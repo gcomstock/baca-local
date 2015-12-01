@@ -17,9 +17,8 @@
 	
 	<div class="page-name"></div><!-- /page-name -->
 
-	<div class="navbar-container clearfix">
-
-		<a href="<?php echo home_url(); ?>">
+	<div class="navbar-container">
+		<a class= href="<?php echo home_url(); ?>">
 			<img id="logo" src="<?php echo bloginfo('template_directory'); ?>/images/MWB-logo.png" alt="M.W.B">
 			<img id="logo-mobile" src="<?php echo bloginfo('template_directory'); ?>/images/MWB-logo-mobile.png" alt="M.W.B">
 		</a>
@@ -31,11 +30,7 @@
 		?>
 		<?php wp_nav_menu($args); ?>
 
-		<?php if (!is_front_page()&&!is_page('about')) {?> 
-
-			<div class="scrollTop">
-				<li>BACK TO TOP</li>
-			</div><!-- /scrollTop -->
-
+		<?php if (!is_front_page()&&!is_page('about')) {?>
+			<a href="#" class="scrollTop">back to top</a>
 		<?php } ?>
 	</div><!-- /navbar-container -->
