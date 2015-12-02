@@ -9,15 +9,12 @@
 <body <?php body_class(); ?>>
 
 <div class="wrapper">
-	<div id="menu-bar">
-		<span class='icon'>i</span>
-		<span class='icon'>i</span>
-		<span class='icon'>i</span>
-	</div><!-- /menu-bar -->
-	
-	<div class="page-name"></div><!-- /page-name -->
+
 
 	<div class="navbar-container">
+		<div id="menu-bar"></div>
+    	<div class="page-name"></div>
+
 		<a class= href="<?php echo home_url(); ?>">
 			<img id="logo" src="<?php echo bloginfo('template_directory'); ?>/images/MWB-logo.png" alt="M.W.B">
 			<img id="logo-mobile" src="<?php echo bloginfo('template_directory'); ?>/images/MWB-logo-mobile.png" alt="M.W.B">

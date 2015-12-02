@@ -91,8 +91,6 @@ ul li, li {
 	display: none;
 }
 
-
-
 .scrollTop {
 	position: absolute;
 	bottom: 25px;
@@ -139,35 +137,33 @@ ul li, li {
 	}
 
 	#menu-bar {
-		width: 19px;
-		height: 25px;
+		width: 44px;
+		height: 44px;
 		cursor: pointer;
 		display: block;
 		position: absolute;
-		left: 0.7rem;
-		top: 0.9rem;
-		z-index: 5000;
-		transform: rotate(90deg);
+		left: 0;
+		top: 0;
+		background-image: url('../images/icon-drawer.png');
+		background-size: 100%;
 	}
 
-	.icon {
-		font-size: 18px;
-	}
+
 
 	.nav-expanded {
 		display: block;
 	}
 
-	.scrollTop {
+	.navbar-container a.scrollTop {
 		display: none;
 	}
 
 	.page-name {
 		position: absolute;
 		display: block;
-		right: 0.7rem;
-		top: 0.7rem;
-		font-size: 20px;
+		right: 7px;
+		top: 0;
+		line-height: 44px;
 	}
 }
 
