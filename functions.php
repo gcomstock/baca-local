@@ -14,8 +14,7 @@ function get_files() {
     wp_register_script( 'getPermalink', get_template_directory_uri() . '/js/getPermalink.js', array( 'jquery' ) );
     wp_register_script( 'showMore', get_template_directory_uri() . '/js/showMore.js', array( 'jquery' ) );
     wp_register_script( 'iosslider', get_template_directory_uri() . '/js/jquery.iosslider.min.js', array( 'jquery' ) );
-   
-    wp_enqueue_script( 'lightbox' );
+
     wp_enqueue_script( 'scrollTop' );
     wp_enqueue_script( 'menu-bar' );
     wp_enqueue_script( 'wrapMenus' );

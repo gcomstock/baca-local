@@ -40,14 +40,15 @@
 
 .sliderDots {
 	position: absolute;
-	bottom: 30px;
-	left: 30px;
+	bottom: 25px;
+	left: 25px;
+	width: 11%;
 }
 .sliderDots .dot {
-	width: 14px;
-	height: 14px;
-	margin-right: 8px;
-	border-radius: 14px;
+	width: 10px;
+	height: 10px;
+	margin-right: 6px;
+	border-radius: 10px;
 	background-color: #000;
 	display: inline-block;
 	transition: background-color 250ms linear;
