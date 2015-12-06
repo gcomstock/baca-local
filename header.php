@@ -14,10 +14,10 @@
 	    <div id="mobile-menu">
 		    <div id="menu-bar"></div>
     	    <div class="page-name"></div>
-    	    <img id="logo-mobile" src="<?php echo bloginfo('template_directory'); ?>/images/MWB-logo-mobile.png" alt="M.W.B">
+    	    <a href="<?php echo home_url(); ?>"><img id="logo-mobile" src="<?php echo bloginfo('template_directory'); ?>/images/MWB-logo-mobile.png" alt="M.W.B"></a>
         </div>
 
-		<a class= href="<?php echo home_url(); ?>">
+		<a href="<?php echo home_url(); ?>">
 			<img id="logo" src="<?php echo bloginfo('template_directory'); ?>/images/MWB-logo.png" alt="M.W.B">
 		</a>
 
