@@ -14,18 +14,19 @@
 
 				<?php $src = get_the_excerpt(); ?>
 
-				<iframe src="<?php echo $src; ?>" width="2000" height="580" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <div class="videoWrapper">
+				    <iframe src="<?php echo $src; ?>" width="2000" height="580" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
 
 				<div class="vimeoVid">
-					<h1><?php the_title(); ?></h1>
-					<div class="vimeoDescription hideContent">
-						<?php the_content(); ?>
-					</div><!-- /vimeoDescription hideContent -->
-					<div class="showMore">
-						<hr>
-						<p class="expand">SHOW MORE</p>
-					</div><!-- /showMore -->
+			    	<h1 class="mobile-title"><?php the_title(); ?></h1>
+				    <div class="desc">
+			    	    <?php the_content(); ?>
+			    	</div>
+					<h1 class="web-title"><?php the_title(); ?></h1>
+					<a class="showMore">SHOW MORE</a>
 				</div><!-- /vimeoVid -->
+				<hr>
 
 			<?php
 				endwhile;
