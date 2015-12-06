@@ -10,7 +10,6 @@
 
 <div class="wrapper">
 
-
 	<div class="navbar-container">
 	    <div id="mobile-menu">
 		    <div id="menu-bar"></div>

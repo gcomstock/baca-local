@@ -254,200 +254,34 @@ ul li, li {
 }
 
 
-/* about.php */
-
-#aboutGrid {
-	width: 83%;
-}
 
 .about {
-	margin: 8.5rem auto;
-	width: 80%;
+	margin-left: 17%;
+	padding: 5% 10%;
+}
+
+.about img {
+	width: 100%;
+	height: auto;
 }
 
 .about p {
 	text-align: center;
-    margin-top: 1rem;
-    font-size: 15px;
-    letter-spacing: 0.5px;
+    margin: 20px;
+	line-height: 1.4rem;
 }
-.about-mobile {
-	display: none;
-}
-
-
-/*.about p a:hover {*/
-/*color: #00fcff;*/
-/*}*/
-
-/*.wrapper-about {
-	background-color: #f0f5ff;
-}
-*/
-
-/*.aboutRow {
-	margin-bottom: 60px;
-}
-
-.bioName{
-	font-size: 2rem;
-	margin-top: 3.6rem;
-	text-align: center;
-	margin-bottom: 3rem;
-}
-
-.bioName .michael-mobile {
-	display: none;
-}
-
-.bioLeft {
-	font-size: 1rem;
-	float: left;
-	width: 50%;
-}
-
-.bioLeft p {
-	margin-top: .6rem;
-	margin-bottom: 1.6rem;
-	font-size: 0.9rem;
-}
-
-.bioLeft img {
-	margin-top: .8rem;
-}
-
-.bioRight {
-	font-size: 1.5rem;
-	float: left;
-	width: 50%;
-}
-
-.bioRight p {
-	font-size: 1.2rem;
-	line-height: 2.5rem;
-}
-
-.bioLeft, .bioRight {
-	padding-right: 30px;
-}*/
-
-@media screen and (max-width: 768px) {
-	#aboutGrid {
-		width: 100%;
-	}
-
+@media screen and (max-width: 800px) {
 	.about {
-		margin: 0 auto;
-		width: 100%;
+		margin-top: 44px;
+		margin-left: 0;
+		padding: 0;
 	}
-
-	/*.bioLeft, .bioRight {
-		width: 100%;
-		padding-right: 0;
-	}*/
 }
 
-/*.contact {
-	font-size: 1.5rem;
-	padding: 30px;
-}
 
-.contact h1 {
-	font-size: 1.6rem;
-	text-align: center;
-    margin-bottom: 30px;
-}
 
-.contact p {
-	line-height: 2.5rem;
-}
 
-.colLast {
-	padding-right: 0;
-}*/
 
-/*input, textarea {
-	border: 1px solid #000;
-	width: 100%;
-	font-size: 1.2rem;
-	padding: 5px;
-}
-
-textarea {
-	resize: none;
-}
-
-textarea:focus, input:focus{
-    outline: 0;
-}
-*/
-
-/*@media screen and (max-width: 650px) {
-	.bioName h1 {
-		font-size: 1.5rem; 
-	}
-}*/
-
-@media screen and (max-width: 415px) {
-
-	.about-desktop {
-		display: none;
-	}
-
-	.about-mobile {
-		width: 100%;
-		height: 607px;
-		background-image: url(../images/michael.jpg);
-		background-position: 46.2% 10.1%;
-		background-size: 870px;
-		background-repeat: no-repeat;
-		display: block;	
-	}
-
-/*	.about-mobile img {
-		height: 607px;
-	}*/
-/*	.aboutRow {
-		margin-bottom: .5rem;
-	}
-
-	.bioName {
-		margin: .5rem 0;
-	}
-
-	.bioName h1,
-	.contact h1 {
-		font-size: 1.3rem; 
-	}
-
-	.bioRight p {
-		padding: 0 10px;
-		font-size: 1rem;
-		line-height: 1.7rem;
-	}
-
-	.bioLeft p {
-		padding: 0 10px;
-		margin-bottom: 1.1rem;
-		font-size: 0.7rem;
-	}
-
-	.contact p {
-		font-size: 1rem;
-	}
-
-	.bioName .michael {
-		display: none;
-	}
-
-	.bioName .michael-mobile {
-		display: block;
-	}
-
-	.bioLeft img {
-		margin-top: 0;
-	}*/
-}
 
 /* video.php */
 
