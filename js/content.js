@@ -102,11 +102,17 @@ function constructGallerySlider ($slider) {
 		
 		if (window.innerWidth >= 800) {
 			$('.galleryDetail__lightbox').css({
-				'margin-top': galleryDetailHeight*0.06,
-				'margin-left': galleryDetailWidth*0.08,
-				'height': galleryDetailHeight*0.88,
-				'width' : galleryDetailWidth*0.84
+				'margin-top': 0,
+				'margin-left': 0,
+				'height': galleryDetailHeight,
+				'width' : galleryDetailWidth
 			});
+			// $('.galleryDetail__lightbox').css({
+			// 	'margin-top': galleryDetailHeight*0.06,
+			// 	'margin-left': galleryDetailWidth*0.08,
+			// 	'height': galleryDetailHeight*0.88,
+			// 	'width' : galleryDetailWidth*0.84
+			// });
 		}
 		else {
 			$('.galleryDetail__lightbox').css({
