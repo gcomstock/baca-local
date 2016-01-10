@@ -19,29 +19,20 @@
 	vertical-align: middle;
 }
 
-/*
+
 .galleryDetail__lightbox__slider .slide img {
-	max-width: 100%;
-	max-height: 100%;
 	position: absolute;
+	max-width: 96%;
+	max-height: 98%;
+	border: 1px solid #aaa;
+	padding: 6px;
+	background-color: #fff;
+	box-shadow: 3px 3px 0 0px rgba(0,0,0,0.25);
 	top: 50%;
 	left: 50%;
 	transform: translateY(-50%) translateX(-50%);
 }
 
-@media screen and (max-width: 800px) {
-*/
-	.galleryDetail__lightbox__slider .slide img {
-		max-width: 96%;
-		max-height: 98%;
-		border: 1px solid #aaa;
-		padding: 6px;
-		background-color: #fff;
-		box-shadow: 3px 3px 0 0px rgba(0,0,0,0.25);
-	}
-/*	
-}
-*/
 
 
 
@@ -128,7 +119,6 @@
 	pointer-events: none;
 }
 
-
 .galleryDetail__lightbox .nav--close {
 	top: -2px;
 	background-position: -5px 0;
@@ -136,32 +126,13 @@
 .galleryDetail__lightbox .nav--close:hover {
 	background-position: -5px 60px;
 }
-@media screen and (max-width: 800px) {
-	.galleryDetail__lightbox .nav--close {
-		left: 0;
-		bottom: 0;
-		top: inherit;
-		border: none;
-		height: 44px;
-		width: 50px;
-		background-size: 154px 88px;
-	}
-	.galleryDetail__lightbox .nav--close:hover {
-		background-position: 0 0;
-	}
-}
-
-
 .galleryDetail__lightbox .nav--next {
 	top: 84px;
 	background-position: 65px 0;
 }
-
-
 .galleryDetail__lightbox .nav--next:hover {
 	background-position: 65px 60px;
 }
-
 .galleryDetail__lightbox .nav--prev {
 	top: 150px;
 	background-position: 135px 0;
@@ -171,11 +142,35 @@
 }
 
 .galleryDetail__lightbox__navholder {
-	position: absolute;
 	top: 0;
 	left: 0;
+	position: absolute;
 	z-index: 100;
 }
+
+@media screen and (max-width: 800px) {
+	.nav--next,
+	.nav--prev,
+	.nav:after {
+		display: none;
+	}
+	.galleryDetail__lightbox__navholder {
+		top: auto;
+		bottom: 44px;
+		left: 22px;
+	}
+	.galleryDetail__lightbox .nav--close {
+		top: auto;
+		border: none;
+		height: 44px;
+		width: 50px;
+		background-size: 154px 88px;
+	}
+	.galleryDetail__lightbox .nav--close:hover {
+		background-position: -5px 0;
+	}
+}
+
 
 
 .galleryDetail__lightbox__wrapper {
