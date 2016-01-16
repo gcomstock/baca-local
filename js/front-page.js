@@ -12,10 +12,10 @@ function constructHomeSlider ($slider) {
 		startAtSlide: 1,
 		infiniteSlider: true,
 		autoSlideTransTimer: 800,
-		autoSlide: false,
+		autoSlide: true,
 		autoSlideTimer: 2500,
 		snapSlideCenter: true,
-		autoSlideHoverPause: false,
+		autoSlideHoverPause: true,
 		onSliderLoaded: loaded,
 		onSliderResize: resize,
 		onSlideChange: slideChange
