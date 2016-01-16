@@ -23,6 +23,29 @@ jQuery(function($){
 		$('.galleryDetail').removeClass('active');
 		$slider.find('.slide').remove();
 	});
+
+	$(document).keydown(function(event){
+		var isGalleryOpen = $('.galleryDetail').hasClass('active');
+		var $prev = $('.nav--prev');
+		var $next = $('.nav--next');
+
+		//tab
+		if (isGalleryOpen && event.keyCode == 9 && !$next.hasClass('disabled') ) {
+			$next.click();
+		}
+		//left arrow
+		if (isGalleryOpen && event.keyCode == 37 && !$prev.hasClass('disabled') ) {
+			$prev.click();
+		}
+		//right arrow
+		if (isGalleryOpen && event.keyCode == 39 && !$next.hasClass('disabled') ) {
+			$next.click();
+		}
+		//esc
+		if (isGalleryOpen && event.keyCode == 27 ) {
+			$('.nav--close').click();
+		}
+	});
 });
 
 
@@ -57,6 +80,7 @@ function constructGallerySlider ($slider) {
 	sizeLightbox();
 
 	$slider.iosSlider({
+		//keyboardControls: true, //we use our own function to check for disabled class
 		snapToChildren: true,
 		desktopClickDrag: true,
 		startAtSlide: 2,
@@ -65,6 +89,7 @@ function constructGallerySlider ($slider) {
 		snapFrictionCoefficient: 0.7,
 		navPrevSelector: $('.nav--prev'),
 		navNextSelector: $('.nav--next'),
+		autoSlideTransTimer: 300,
 		onSlideChange: slideChange,
 		onSliderResize: resize,
 		onSliderUpdate: setTitle,
