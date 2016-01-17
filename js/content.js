@@ -89,7 +89,7 @@ function constructGallerySlider ($slider) {
 		snapFrictionCoefficient: 0.7,
 		navPrevSelector: $('.nav--prev'),
 		navNextSelector: $('.nav--next'),
-		autoSlideTransTimer: 300,
+		autoSlideTransTimer: 350,
 		onSlideChange: slideChange,
 		onSliderResize: resize,
 		onSliderUpdate: setTitle,
