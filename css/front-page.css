@@ -1,3 +1,7 @@
+body.home .page-name {
+	display: none;
+}
+
 .frontPage {
 	margin-left: 17%;
 }
@@ -55,6 +59,11 @@
 	bottom: 25px;
 	left: 25px;
 	width: 11%;
+}
+@media screen and (max-width: 800px) {
+	.sliderDots {
+		display: none;
+	}
 }
 .sliderDots .dot {
 	width: 10px;

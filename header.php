@@ -36,13 +36,7 @@
 	    <div id="mobile-menu">
 		    <div id="menu-bar"></div>
     	    <div class="page-name">
-    	    	<?php
-    	    		global $post;
-    	    		$post_slug=$post->post_name;
-    	    		if ($post_slug != 'home') {
-    	    			echo $post_slug;
-    	    		}
-    	    	?>
+    	    	<?php global $post; echo $post->post_name; ?>
     	    </div>
     	    <a href="<?php echo home_url(); ?>"><img id="logo-mobile" src="<?php echo bloginfo('template_directory'); ?>/images/MWB-logo-mobile.png" alt="M.W.B"></a>
         </div>
