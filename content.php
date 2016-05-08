@@ -14,16 +14,18 @@
 				$the_query->the_post();
 
 				$title = get_the_title();
-				$imgUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-				$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); //we can specify a custom size in functions.php later
-				$thumbUrl = $thumb['0'];
+
+				//dimensions defined in /wp-admin/options-media.php
+				$largeImg     = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); //max 2400x1200
+				$mobileThumb  = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' ); //max 300x400
+				$desktopThumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); //max 600x900
 
 				echo '
-				<div class="photoGrid__photo" data-imgurl="'.$imgUrl.'">
+				<div class="photoGrid__photo" data-imgurl="'.$largeImg['0'].'">
 					<div class="photoGrid__overlay">
 						<div class="photoGrid__overlay__title">'.$title.'</div>
 					</div>
-					<img src="'.$thumbUrl.'">
+					<img data-desktopThumb="'.$desktopThumb['0'].'" data-mobileThumb="'.$mobileThumb['0'].'"> 
 				</div>
 				';
 			}

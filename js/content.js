@@ -4,6 +4,23 @@ var $ = jQuery;
 jQuery(function($){
 	constructGallerySlider($slider);
 
+
+	$('.photoGrid__photo img').unveil();
+	// $(window).on('resize', function(){
+	// 	var windowWidth = window.outerWidth;
+	// 	var dataAttr = windowWidth < 800 ? 'mobilethumb' : 'desktopthumb';
+
+	// 	$('.photoGrid__photo img').each(function(index, el){
+	// 		$el = $(el);
+	// 		var newPath = $el.data(dataAttr);
+	// 		var currPath = $el.attr('src');
+
+	// 		if (newPath !== currPath) {
+	// 			$el.attr('src', newPath);	
+	// 		}
+	// 	});
+	// });
+
 	//thumbnail click handler
 	$('.photoGrid__photo').on('click', function(){
 		var thumbIndex = $('.photoGrid__photo').index(this);
